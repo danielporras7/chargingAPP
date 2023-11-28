@@ -2,23 +2,60 @@
 <html>
   <head>
     <title>EV Charger Finder</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&libraries=places&callback=initMap" async defer></script>
-    <style>
-      /* Set the map height explicitly to define the size of the div element that contains the map. */
-      #map {
-        height: 100%;
-      }
-
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY_HERE&libraries=places&callback=initMap" async defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./maps.css">
+    <script src="maps.js"></script>
   </head>
   <body>
+    <div class="navbar">
+      <div class="title"><strong>EV Charging Web App</strong></div>
+      <div class="name"><strong>Made by: Ryan Andrada, James Crank, Feras Machta, Daniel Porras</strong></div>
+      <div>
+        <button class="open-button" onclick="search('all')"> Search All Chargers</button>
+      <button class="open-button" onclick="selectVehicle('')"> Select Vehicle</button>
+      <button class="open-button" onclick="savedVehicle('')"> Saved Vehicle</button>
+      <button class="open-button" onclick="openForm('logSignSelector')"> Account</button>      
+    </div>
+
+    <!-- LOGIN/SIGN UP SELECTOR -->
+    <div class="form-popup" id="logSignSelector">
+      <form class="form-container">
+        <button type="button" class="open-button" onclick="closeForm('logSignSelector'); openForm('login')">Login</button>
+        <button type="button" class="open-button" onclick="closeForm('logSignSelector'); openForm('signup')">Sign up</button>        
+      </form>
+    </div>
+
+      <!-- SIGN UP -->
+      <div class="form-popup" id="signup">
+        <form class="form-container">
+          <h5>Sign Up</h5>
+          <input type="text" placeholder="Enter Email" name="email" required autocomplete="on">
+      
+          <input type="password" placeholder="Enter Password" name="psw" required autocomplete="on">
+      
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm('signup')">Close</button>
+        </form>
+      </div>
+
+      <!-- LOGIN -->
+    <div class="form-popup" id="login">
+      <form class="form-container">
+        <h5>Log in</h5>
+        <input type="text" placeholder="Enter Email" name="email" required autocomplete="on">
+
+        <input type="password" placeholder="Enter Password" name="psw" required autocomplete="on">
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm('login')">Close</button>
+      </form>
+    </div>
+    
+  </div>
+
     <div id="map"></div>
-    <script src="map_script.js"></script>
+
   </body>
 </html>
