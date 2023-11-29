@@ -1,0 +1,26 @@
+/*
+* Variables to be used in stylesheets
+*/
+
+@use "sass:map";
+
+$cursive: cursive;
+
+// Breakpoints
+$breakpoint-mobile: 375px;
+$breakpoint-mobile-lg: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 992px;
+
+// Colors
+$colors: (
+    "electric-blue": #035096,
+    "gray": #808080,
+    "white": #FFFFFF,
+    "light-gray": #eee,
+);
+
+@function color($color) {
+    @return map.get($colors, $color);
+}
+

@@ -4,35 +4,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Compiled and minified CSS -->
+  <!---->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <title>Charging Near Me</title>
 </head>
-<body class="grey lighten-3">
-
-  <!-- NAVBAR -->
-  <nav class="z-depth-0 grey lighten-4">
-    <div class="nav-wrapper container">
-      <a href="#" class="brand-logo">
-        <img src="logo.png" style="width: 120px; margin-top: 10px;">
-      </a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li class="logged-in"style="display: none;">
-            <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+<body>
+  <nav class="nav-bar">
+    <div class="nav-wrapper">
+      <div class="site-logo-container">
+       <img class="site-logo" src="assets/charging-near-me-icon.jpg"> 
+      </div>
+      <p class="title-text">Charging Near Me</p>
+      <ul id="nav-mobile">
+          <li class="logged-in">
+            <a href="#" class="white-text modal-trigger" data-target="modal-account">Account</a>
           </li>
-          <li class="logged-in"style="display: none;">
-            <a href="#" class="grey-text" id="logout">Logout</a>
+          <li class="logged-in">
+            <a href="#" class="white-text" id="logout">Logout</a>
           </li>
-          <li class="logged-in"style="display: none;">
-            <a href="maps.html" class="grey-text" id="MAP">Go To Map</a>
+          <li class="logged-in">
+            <a href="maps.html" class="white-text" id="MAP">Go To Map</a>
           </li>
-          <li class="logged-in"style="display: none;">
-            <a href="#" class="grey-text modal-trigger" data-target="modal-create">New Vehicle</a>
+          <li class="logged-in">
+            <a href="#" class="white-text modal-trigger" data-target="modal-create">New Vehicle</a>
           </li>
-          <li class="logged-out"style="display: none;">
-            <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+          <li class="logged-out">
+            <a href="#" class="white-text modal-trigger" data-target="modal-login">Login</a>
           </li>
-          <li class="logged-out"style="display: none;">
-            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+          <li class="logged-out">
+            <a href="#" class="white-text modal-trigger" data-target="modal-signup">Sign up</a>
           </li>
         </span>
       </ul>
@@ -128,6 +130,11 @@
         <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
     </ul>
+  </div>
+
+  <div class="footer">
+    <p class="footer-text">By: Feras Machta, Daniel Porras, Ryan Andrada, and James Crank</p>
+    <a href="https://github.com/danielporras7/chargingAPP" target="_blank"><img src="assets/GitHub-Icon.png" class="github-icon" alt="Github icon" title="Visit Our GitHub Repository"/></a>
   </div>
   
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
