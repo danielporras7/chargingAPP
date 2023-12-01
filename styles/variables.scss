@@ -6,11 +6,13 @@
 
 $cursive: cursive;
 
+
 // Breakpoints
 $breakpoint-mobile: 375px;
 $breakpoint-mobile-lg: 576px;
 $breakpoint-tablet: 768px;
 $breakpoint-laptop: 992px;
+$breakpoint-desktop: 1200px;
 
 // Colors
 $colors: (
@@ -18,6 +20,8 @@ $colors: (
     "gray": #808080,
     "white": #FFFFFF,
     "light-gray": #eee,
+    "dark-teal": #007B86,
+    "xlight-blue" : #d8ecf3,
 );
 
 @function color($color) {

@@ -3,6 +3,7 @@ const guideList = document.querySelector(".guides");
 const loggedOutLinks = document.querySelectorAll(".logged-out");
 const loggedInLinks = document.querySelectorAll(".logged-in");
 const accountDetails = document.querySelector(".account-details");
+const unauthContent = document.getElementById("unauth-content-container");
 
 const setupUI = (user) => {
   if (user) {
@@ -18,6 +19,8 @@ const setupUI = (user) => {
         accountDetails.innerHTML = html;
       });
     // toggle user UI elements
+    unauthContent.style.display = "none";
+    guideList.style.display = "block";
     loggedInLinks.forEach((item) => (item.style.display = "block"));
     loggedOutLinks.forEach((item) => (item.style.display = "none"));
   } else {
@@ -26,6 +29,8 @@ const setupUI = (user) => {
     // toggle user elements
     loggedInLinks.forEach((item) => (item.style.display = "none"));
     loggedOutLinks.forEach((item) => (item.style.display = "block"));
+    unauthContent.style.display = "block";
+    guideList.style.display = "none";
   }
 };
 
@@ -44,8 +49,6 @@ const setupGuides = (data) => {
       html += li;
     });
     guideList.innerHTML = html;
-  } else {
-    guideList.innerHTML = '<h5 class="center-align">Login to view Cars</h5>';
   }
 };
 
