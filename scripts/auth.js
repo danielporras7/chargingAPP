@@ -42,17 +42,25 @@ signupForm.addEventListener("submit", (e) => {
   const email = signupForm["signup-email"].value;
   const password = signupForm["signup-password"].value;
 
+  if (password.length < 6) {
+    signupForm["signup-password"].classList.add("invalid")
+    return;
+  }
+
   // sign up the user
-  auth.createUserWithEmailAndPassword(email, password).then((cred) => {
-    return db.collection('users').doc(cred.user.uid).set({
-      bio: signupForm['signup-bio'].value
+  auth
+    .createUserWithEmailAndPassword(email, password)
+    .then((cred) => {
+      return db.collection("users").doc(cred.user.uid).set({
+        bio: signupForm["signup-bio"].value,
+      });
+    })
+    .then(() => {
+      // close the signup modal & reset form
+      const modal = document.querySelector("#modal-signup");
+      M.Modal.getInstance(modal).close();
+      signupForm.reset();
     });
-  }).then(() => {
-    // close the signup modal & reset form
-    const modal = document.querySelector("#modal-signup");
-    M.Modal.getInstance(modal).close();
-    signupForm.reset();
-  });
 });
 
 // logout
