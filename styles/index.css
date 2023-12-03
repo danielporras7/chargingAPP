@@ -94,8 +94,8 @@ body {
 }
 #unauth-content-container .cta-container {
   background-image: url("../assets/cta-asset.jpg");
+  height: 50%;
   background-size: cover;
-  height: 50vh;
   background-position: 50% center;
 }
 #unauth-content-container .cta-container .cta-text {
@@ -175,11 +175,18 @@ body {
     margin-right: auto;
   }
   #unauth-content-container .cta-container #cta-text-bottom {
-    margin-top: 25%;
+    margin-top: 20%;
   }
 }
 @media screen and (min-width: 1200px) {
+  #unauth-content-container .cta-container {
+    background-position: 0% 0%;
+    height: 90%;
+  }
+  #unauth-content-container .cta-container #cta-text-top {
+    padding-top: 100px;
+  }
   #unauth-content-container .cta-container #cta-text-bottom {
-    margin-top: 20%;
+    margin-top: 35%;
   }
 }/*# sourceMappingURL=index.css.map */

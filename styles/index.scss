@@ -103,8 +103,8 @@ body {
 
   .cta-container {
     background-image: url("../assets/cta-asset.jpg");
+    height: 50%;
     background-size: cover;
-    height: 50vh;
     background-position: 50% center;
 
     .cta-text {
@@ -220,7 +220,7 @@ body {
   #unauth-content-container {
     .cta-container {
       #cta-text-bottom {
-        margin-top: 25%;
+        margin-top: 20%;
       }
     }
   }
@@ -229,8 +229,15 @@ body {
 @media screen and (min-width: $breakpoint-desktop) {
   #unauth-content-container {
     .cta-container {
+      background-position: 0% 0%;
+      height: 90%;
+
+      #cta-text-top {
+        padding-top: 100px;
+      }
+
       #cta-text-bottom {
-        margin-top: 20%;
+        margin-top: 35%;
       }
     }
   }
