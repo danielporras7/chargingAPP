@@ -219,8 +219,10 @@ body {
 
   #unauth-content-container {
     .cta-container {
+      font-size: 3rem;
+
       #cta-text-bottom {
-        margin-top: 20%;
+        margin-top: 0;
       }
     }
   }
@@ -228,16 +230,23 @@ body {
 
 @media screen and (min-width: $breakpoint-desktop) {
   #unauth-content-container {
+    .description-container {
+      .description-text {
+        font-size: 24px;
+      }
+    }
+
     .cta-container {
       background-position: 0% 0%;
       height: 90%;
 
       #cta-text-top {
+        font-size: 24px;
         padding-top: 100px;
       }
 
       #cta-text-bottom {
-        margin-top: 35%;
+        font-size: 24px;
       }
     }
   }

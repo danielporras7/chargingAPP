@@ -174,19 +174,26 @@ body {
   .nav-bar .nav-wrapper .site-logo-container {
     margin-right: auto;
   }
+  #unauth-content-container .cta-container {
+    font-size: 3rem;
+  }
   #unauth-content-container .cta-container #cta-text-bottom {
-    margin-top: 20%;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 1200px) {
+  #unauth-content-container .description-container .description-text {
+    font-size: 24px;
+  }
   #unauth-content-container .cta-container {
     background-position: 0% 0%;
     height: 90%;
   }
   #unauth-content-container .cta-container #cta-text-top {
+    font-size: 24px;
     padding-top: 100px;
   }
   #unauth-content-container .cta-container #cta-text-bottom {
-    margin-top: 35%;
+    font-size: 24px;
   }
 }/*# sourceMappingURL=index.css.map */
