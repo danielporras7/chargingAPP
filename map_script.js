@@ -37,7 +37,7 @@ function createUserMarker(location) {
 
 async function searchNearby(center) {
   const url = "https://places.googleapis.com/v1/places:searchNearby";
-  const apiKey = "API_KEY_HERE"; // Use your actual API key here
+  const apiKey = "AIzaSyC9in8QBJ5dcOcOHX7tcT0RMPSwaNehxCE"; // Use your actual API key here
 
   const requestBody = {
     includedTypes: ["electric_vehicle_charging_station"],
